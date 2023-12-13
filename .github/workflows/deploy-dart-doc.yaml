@@ -1,0 +1,40 @@
+name: Deploy Dart Doc to Pages
+
+on:
+  pull_request:
+    branches:
+      - master
+      # - dev
+  push:
+    branches:
+      - dev
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.12.0
+        with:
+          channel: "stable"
+
+      - run: flutter --version
+
+      - name: generate doc
+        run: dart doc --output doc
+
+      - run: |
+          cd doc/api
+          git init
+          git config --global user.email yeasinsheikh50@gmail.com
+          git config --global user.name yeasin50
+          git status
+          git remote add origin https://${{secrets.COMMIT_SECRET}}@github.com/yeasin50/my_utils.git
+          git checkout -b gh-page
+          git add --all
+          git commit -m "update"
+          git push origin gh-page -f

@@ -1,14 +1,14 @@
+/// This is a library for common utilities used in my projects.
+///
+
 library my_utils;
 
-import 'package:equatable/equatable.dart';
-import 'package:fpdart/fpdart.dart';
-import 'package:logger/logger.dart';
-import 'package:flutter/material.dart';
+export 'src/error/failures.dart';
+export 'src/extensions/failure_message.dart';
 
-part 'src/extensions/failure_message.dart';
-part 'src/extensions/either_extension.dart';
-part 'src/error/exceptions.dart';
-part 'src/error/failures.dart';
-part 'src/logger.dart';
-part 'src/usecases/usecase.dart';
-part 'src/extensions/gap_from_number.dart';
+export 'src/extensions/either_extension.dart';
+export 'src/error/exceptions.dart';
+
+export 'src/logger.dart';
+export 'src/usecases/usecase.dart';
+export 'src/extensions/gap_from_number.dart';

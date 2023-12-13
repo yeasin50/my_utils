@@ -1,10 +1,10 @@
 name: my_utils
 description: A new Flutter package project.
-version: 0.0.1
+version: 0.0.2
 homepage: none
 
 environment:
-  sdk: '>=3.0.3 <4.0.0'
+  sdk: ">=3.0.3 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -20,38 +20,4 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
 
-
-
-
 flutter:
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
