@@ -23,6 +23,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: stable
+      - run: flutter --version
 
       - name: clean
         run: flutter clean
