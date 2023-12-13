@@ -11,32 +11,32 @@ void main() {
       });
 
       test('NetworkFailure', () {
-        final a = NetworkFailure();
+        const a = NetworkFailure();
         expect(a.message, "No Internet Connection");
       });
 
       test('ServerFailure', () {
-        final a = ServerFailure();
+        const a = ServerFailure();
         expect(a.message, "Server Error");
       });
 
       test('CacheFailure', () {
-        final a = CacheFailure();
+        const a = CacheFailure();
         expect(a.message, "Cant get data");
       });
 
       test('NullFailure', () {
-        final a = NullFailure();
+        const a = NullFailure();
         expect(a.message, "Data is null");
       });
 
       test('AuthFailure', () {
-        final a = AuthFailure();
+        const a = AuthFailure();
         expect(a.message, "Failed to Auth");
       });
 
       test('AuthCancelByUser', () {
-        final a = AuthCancelByUser();
+        const a = AuthCancelByUser();
         expect(a.message, "Auth failed: canceled by User");
       });
 

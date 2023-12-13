@@ -5,50 +5,50 @@ void main() {
   group('failures', () {
     group('Instance of same class should pass value equality', () {
       test('UnknownFailure', () {
-        final a = UnknownFailure('test');
-        final b = UnknownFailure('test');
+        const a = UnknownFailure('test');
+        const b = UnknownFailure('test');
         expect(a, b);
       });
 
       test('NetworkFailure', () {
-        final a = NetworkFailure();
-        final b = NetworkFailure();
+        const a = NetworkFailure();
+        const b = NetworkFailure();
         expect(a, b);
       });
 
       test('ServerFailure', () {
-        final a = ServerFailure();
-        final b = ServerFailure();
+        const a = ServerFailure();
+        const b = ServerFailure();
         expect(a, b);
       });
 
       test('CacheFailure', () {
-        final a = CacheFailure();
-        final b = CacheFailure();
+        const a = CacheFailure();
+        const b = CacheFailure();
         expect(a, b);
       });
 
       test('NullFailure', () {
-        final a = NullFailure();
-        final b = NullFailure();
+        const a = NullFailure();
+        const b = NullFailure();
         expect(a, b);
       });
 
       test('AuthFailure', () {
-        final a = AuthFailure();
-        final b = AuthFailure();
+        const a = AuthFailure();
+        const b = AuthFailure();
         expect(a, b);
       });
 
       test('AuthCancelByUser', () {
-        final a = AuthCancelByUser();
-        final b = AuthCancelByUser();
+        const a = AuthCancelByUser();
+        const b = AuthCancelByUser();
         expect(a, b);
       });
 
       test('PermissionFailure', () {
-        final a = PermissionFailure(msg: 'test');
-        final b = PermissionFailure(msg: 'test');
+        const a = PermissionFailure(msg: 'test');
+        const b = PermissionFailure(msg: 'test');
         expect(a, b);
       });
     });

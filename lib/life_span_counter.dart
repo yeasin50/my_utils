@@ -1,4 +1,6 @@
-part of my_utils;
+library my_utils;
+
+import 'package:flutter/material.dart';
 
 /// A callback that receives the time spent.
 typedef LifeSpanCallback = void Function(Duration lifeSpan);

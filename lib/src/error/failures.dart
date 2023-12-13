@@ -34,6 +34,8 @@ class UnknownFailure extends Failure {
 
 /// when no internet connection available
 class NetworkFailure extends Failure {
+  const NetworkFailure();
+
   @override
   List<Object?> get props => [super.props];
 }
@@ -41,23 +43,48 @@ class NetworkFailure extends Failure {
 /// when server error occurred
 /// topically when status code is 500
 ///
-class ServerFailure extends Failure {}
+class ServerFailure extends Failure {
+  const ServerFailure();
+
+  @override
+  List<Object?> get props => [super.props];
+}
 
 /// when cache error occurred
 ///
-class CacheFailure extends Failure {}
+class CacheFailure extends Failure {
+  const CacheFailure();
+
+  @override
+  List<Object?> get props => [super.props];
+}
 
 /// when data is null
-class NullFailure extends Failure {}
+class NullFailure extends Failure {
+  const NullFailure();
+
+  @override
+  List<Object?> get props => [super.props];
+}
 
 /// when auth failed
 /// topically when status code is 401
 ///
-class AuthFailure extends Failure {}
+class AuthFailure extends Failure {
+  const AuthFailure();
+
+  @override
+  List<Object?> get props => [super.props];
+}
 
 /// when auth canceled by user
 ///
-class AuthCancelByUser extends Failure {}
+class AuthCancelByUser extends Failure {
+  const AuthCancelByUser();
+
+  @override
+  List<Object?> get props => [super.props];
+}
 
 /// when permission failed
 /// Some permission are required to use some features,
@@ -95,7 +122,14 @@ class ValidationFailure extends Failure {
 
 /// Failure occurs when an operation exceeds the specified timeout.
 ///
-class TimeoutFailure extends Failure {}
+class TimeoutFailure extends Failure {
+  final String? operation;
+
+  const TimeoutFailure({this.operation});
+
+  @override
+  List<Object?> get props => [operation];
+}
 
 /// Failure occurs when there is an issue with the database(local)
 /// [message] is the error message
@@ -136,4 +170,11 @@ class FileOperationFailure extends Failure {
 
 /// Failure occurs when the application enters an unexpected state.
 ///
-class UnexpectedStateFailure extends Failure {}
+class UnexpectedStateFailure extends Failure {
+  final String? message;
+
+  const UnexpectedStateFailure({this.message});
+
+  @override
+  List<Object?> get props => [message];
+}
