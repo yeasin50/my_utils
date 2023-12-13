@@ -1,7 +1,15 @@
-part of my_utils;
+library my_utils;
+
+import '../error/failures.dart';
 
 extension FailureMessage on Failure {
-  /// return message[string] based on [Failure]
+  /// return message of the failure as string
+  ///
+  /// ```dart
+  /// final failure = NetworkFailure();
+  /// print(failure.message); // No Internet Connection
+  /// ```
+  ///
   String get message {
     return switch (runtimeType) {
       NetworkFailure => "No Internet Connection",

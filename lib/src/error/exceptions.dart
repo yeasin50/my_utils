@@ -1,4 +1,5 @@
-part of my_utils;
+library my_utils;
+
 
 class ServerException implements Exception {}
 

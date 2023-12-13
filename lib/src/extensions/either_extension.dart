@@ -1,4 +1,5 @@
-part of my_utils;
+library my_utils;
+import 'package:fpdart/fpdart.dart';
 
 /// Extension on `Either` to get the value of `Right` or `Left`.
 /// [Either] is a type that represents one of two possible values. An [Either] is either a [Left] or a [Right].

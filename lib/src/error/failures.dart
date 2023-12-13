@@ -1,4 +1,5 @@
-part of my_utils;
+library my_utils;
+import 'package:equatable/equatable.dart';
 
 /// A `Failure` is a class that represents a failure of your app.
 /// It can be a failure from the server, from the cache, from the device, etc.
@@ -19,7 +20,7 @@ abstract class Failure extends Equatable {
 
 /// General failures
 /// when unknown error occurred
-/// [message] is the error message
+/// [msg] is the error message
 ///
 class UnknownFailure extends Failure {
   /// create [UnknownFailure] with [msg] string
