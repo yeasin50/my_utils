@@ -13,4 +13,4 @@ part 'src/logger.dart';
 part 'src/usecases/usecase.dart';
 part 'src/extensions/gap_from_number.dart';
 
-part 'src/widgets/widgets.dart';
+part 'src/widgets/life_span_counter.dart';

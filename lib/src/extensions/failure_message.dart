@@ -10,7 +10,8 @@ extension FailureMessage on Failure {
       CacheFailure => "Cant get data",
       AuthCancelByUser => "Auth failed: canceled by User",
       NullFailure => "Data is null",
-      PermissionFailure => (this as PermissionFailure).msg ?? "Permission failed",
+      PermissionFailure =>
+        (this as PermissionFailure).msg ?? "Permission failed",
       UnknownFailure => (this as UnknownFailure).msg,
       _ => "Unknown Error",
     };

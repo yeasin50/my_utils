@@ -62,7 +62,7 @@ class AuthCancelByUser extends Failure {}
 /// when permission failed
 /// Some permission are required to use some features,
 /// so this failure is used to handle permission failure.
-/// 
+///
 class PermissionFailure extends Failure {
   /// create [PermissionFailure] with [msg] string
   const PermissionFailure({this.msg});
@@ -79,7 +79,7 @@ class PermissionFailure extends Failure {
 ///
 /// [field] is the field name
 /// [message] is the error message
-/// 
+///
 class ValidationFailure extends Failure {
   const ValidationFailure({
     required this.field,
@@ -94,13 +94,12 @@ class ValidationFailure extends Failure {
 }
 
 /// Failure occurs when an operation exceeds the specified timeout.
-/// 
+///
 class TimeoutFailure extends Failure {}
-
 
 /// Failure occurs when there is an issue with the database(local)
 /// [message] is the error message
-/// 
+///
 class DatabaseFailure extends Failure {
   final String? message;
 
@@ -111,7 +110,7 @@ class DatabaseFailure extends Failure {
 }
 
 /// Failure occurs when the input data is in an unexpected format.
-/// 
+///
 class UnexpectedFormatFailure extends Failure {}
 
 /// Failure occurs when there is an issue with a third-party service.
@@ -125,7 +124,7 @@ class ExternalServiceFailure extends Failure {
 }
 
 /// Failure occurs during file operations like reading or writing.
-/// 
+///
 class FileOperationFailure extends Failure {
   final String operation;
 
@@ -136,5 +135,5 @@ class FileOperationFailure extends Failure {
 }
 
 /// Failure occurs when the application enters an unexpected state.
-/// 
+///
 class UnexpectedStateFailure extends Failure {}

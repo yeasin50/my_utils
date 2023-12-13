@@ -1,6 +1,4 @@
-
-import 'package:flutter/material.dart';
-
+part of my_utils;
 
 /// A callback that receives the time spent.
 typedef LifeSpanCallback = void Function(Duration lifeSpan);
@@ -9,7 +7,7 @@ typedef LifeSpanCallback = void Function(Duration lifeSpan);
 /// It is useful to know how much time a widget is on the screen.
 /// can be used on [PageView] to know how much time a page is on the screen.
 /// or on any/[TabBarView] to know how much time a tab is on the screen.
-/// 
+///
 /// ```dart
 /// LifeSpanCounter(
 ///  lifeSpan: (lifeSpan) {
@@ -18,7 +16,6 @@ typedef LifeSpanCallback = void Function(Duration lifeSpan);
 /// child: Text('Hello World'),
 /// )
 class LifeSpanCounter extends StatefulWidget {
-
   /// creates a widget that count the time spent [child].
   const LifeSpanCounter({
     super.key,
@@ -37,6 +34,7 @@ class LifeSpanCounter extends StatefulWidget {
 
 class _LifeSpanCounterState extends State<LifeSpanCounter> {
   late DateTime initTime;
+
   @override
   void initState() {
     initTime = DateTime.now();
